@@ -1,23 +1,25 @@
 <template>
-  <div class="box">
-    <div class="display-flex">
-      <p id="text">{{decryptedMessage}}</p>
+  <div class="display-flex-colum">
+    <div class="box">
+      <div class="display-flex">
+        <p id="text">{{decryptedMessage}}</p>
+      </div>
+      
+      <div class="buttons-container">
+        <button>
+          <a @click="acceptMessage()">Sim</a>
+        </button>
+        <button id="no">Não</button>
+      </div>
     </div>
     
-    <div class="buttons-container">
-      <button>
-        <a @click="acceptMessage()">Sim</a>
-      </button>
-      <button id="no">Não</button>
-    </div>
+    <template v-if="isAccepted">
+      <br/>
+      <div class="img-div">
+        <img src="../assets/Be.gif" alt="">
+      </div>
+    </template>
   </div>
-  
-  <template v-if="isAccepted">
-    <br/>
-    <div>
-      <img src="../assets/Be.gif" alt="">
-    </div>
-  </template>
 </template>
 
 <script>
@@ -74,6 +76,10 @@ a{
 }
 .display-flex{
   display: flex;
+}
+.display-flex-colum{
+  display: flex;
+  flex-direction: column;
 }
 .box{
   font-size: 20px;
