@@ -10,12 +10,12 @@
       </button>
       <button id="no">Não</button>
     </div>
-    
-    <template v-if="isAccepted">
-      <br/>
-      <img src="../assets/Be.gif" alt="">
-    </template>
   </div>
+  
+  <template v-if="isAccepted">
+    <br/>
+    <img src="../assets/Be.gif" alt="">
+  </template>
 </template>
 
 <script>
