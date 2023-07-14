@@ -6,8 +6,8 @@
       </div>
       
       <div class="buttons-container">
-        <button>
-          <a @click="acceptMessage()">Sim</a>
+        <button @click="acceptMessage()">
+          Sim
         </button>
         <button id="no">Não</button>
       </div>
