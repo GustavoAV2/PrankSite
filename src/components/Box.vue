@@ -14,7 +14,9 @@
   
   <template v-if="isAccepted">
     <br/>
-    <img src="../assets/Be.gif" alt="">
+    <div>
+      <img src="../assets/Be.gif" alt="">
+    </div>
   </template>
 </template>
 
