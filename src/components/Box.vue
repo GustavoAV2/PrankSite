@@ -80,6 +80,8 @@ a{
 .display-flex-colum{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .box{
   font-size: 20px;
@@ -106,6 +108,7 @@ button{
   border-radius: 5px;
   color: blue;
   font-weight: 600;
+  cursor: pointer;
 }
 #btnSave{
   width: 80px;
