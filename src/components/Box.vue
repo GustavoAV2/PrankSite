@@ -6,10 +6,15 @@
     
     <div class="buttons-container">
       <button>
-        <a @click="acceptMessage()" href="">Sim</a>
+        <a @click="acceptMessage()">Sim</a>
       </button>
       <button id="no">Não</button>
     </div>
+    
+    <template v-if="isAccepted">
+      <br/>
+      <img src="../assets/Be.gif" alt="">
+    </template>
   </div>
 </template>
 
@@ -20,7 +25,8 @@ export default {
   name: 'BoxComponent',
   data(){
     return {
-      decryptedMessage: "",
+      isAccepted: false,
+      decryptedMessage: ""
     }
   },
   props: {
@@ -28,6 +34,7 @@ export default {
   },
   methods: {
     acceptMessage(){
+      this.isAccepted = true;
       console.log(this.msg + "\nAprovado");
     },
     decryptPhrase(encryptedPhrase) {
